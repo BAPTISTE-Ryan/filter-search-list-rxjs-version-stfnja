@@ -61,7 +61,6 @@ export class AppComponent implements OnInit {
 
     if (value) {
       this.users$ = this.api.addUsers(value);
-      this.api.logUsers();
 
       this.filteredUsers$ = this.users$.pipe(
         map((users: IUser[]) => {
@@ -71,6 +70,7 @@ export class AppComponent implements OnInit {
           );
         })
       );
+      this.api.logUsers();
     } else {
       this.filteredUsers$ = this.users$;
     }

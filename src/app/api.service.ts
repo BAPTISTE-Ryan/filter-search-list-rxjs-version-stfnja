@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 export class ApiService {
   url: string;
   private data: any = [];
+  globallistvalue: string;
 
   constructor(private http: HttpClient) {
     this.url = `https://jsonplaceholder.typicode.com/users`;
@@ -29,7 +30,6 @@ export class ApiService {
       stringify = stringify.slice(0, stringify.length - 1);
       stringify += ']';
       localStorage.setItem('testJSON', stringify);
-
       this.storageObservable(stringify);
     });
 
@@ -51,8 +51,9 @@ export class ApiService {
       observer.next(obj);
     });
     myObservable.subscribe({
-      next: (value) => console.log(value),
+      next: (value) =>  value 
     });
+
     return myObservable;
   }
   ////////////////
@@ -61,7 +62,7 @@ export class ApiService {
       observer.next(name);
     });
     myObservable.subscribe({
-      next: (value) => value,
+      next: (name) => console.log(name),
     });
     return myObservable;
   }
@@ -78,6 +79,7 @@ export class ApiService {
       text += ']';
       //console.log(text);
       localStorage.setItem('testJSON', text);
+      this.globallistvalue =this.storageObservable(text).;
     });
     let text = localStorage.getItem('testJSON');
     let obj = JSON.parse(text);
@@ -87,6 +89,10 @@ export class ApiService {
     myObservable.subscribe({
       next: (value) => value,
     });
+
+    console.log('===================');
+    this.globallistvalue.;
+    console.log('===================');
     return myObservable;
   }
 
