@@ -1,0 +1,30 @@
+<div class="container">
+  <header>
+    <h1>Angular Filter Search Demo</h1>
+  </header>
+  
+  <button (click)="addUsers($event.target.value)">Add USER </button>
+  <button (click)="deleteUsers()">Delete USER</button>
+
+  <input
+    class="search-box"
+    placeholder="start typing to narrow search"
+    (keyup)="search($event.target.value)"
+    type="text"
+  />
+
+  <ul>
+    <li *ngFor="let user of filteredUsers$ | async">
+      <h2 class="user" (click)="showHide(user)">{{ user.name }}</h2>
+
+      <div class="collapse-able" *ngIf="user.show">
+        <p>{{ user.address.street }}</p>
+        <p>{{ user.address.suite }}</p>
+        <p>{{ user.address.city }}</p>
+        <p>{{ user.address.zipcode }}</p>
+        <p>{{ user.email }}</p>
+        <p>{{ user.phone }}</p>
+      </div>
+    </li>
+  </ul>
+</div>
