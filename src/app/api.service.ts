@@ -46,7 +46,7 @@ export class ApiService {
       stringify += ']';
       localStorage.setItem('testJSON', stringify);
       this.storageObservable(stringify);
-      this.deleteUsers("Leanne Graham");
+      this.deleteUsers('Leanne Graham');
     });
 
     let text = localStorage.getItem('testJSON');
@@ -110,8 +110,8 @@ export class ApiService {
     this.http.get(this.url).subscribe((r) => {
       let text = localStorage.getItem('testJSON');
       let obj = JSON.parse(text);
-      console.log(obj[5-1].id);
-      obj.
+      console.log(obj[5 - 1].id);
+      obj;
       let stringify;
 
       //this.users$=obj.subscribe();
