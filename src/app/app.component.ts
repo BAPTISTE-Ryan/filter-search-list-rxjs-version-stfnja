@@ -12,6 +12,8 @@ export class AppComponent implements OnInit {
   users$: Observable<IUser[]>;
   filteredUsers$: Observable<IUser[]>;
   globalinput = null;
+  iterniumber = 1;
+
   constructor(private api: ApiService) {}
   ngOnInit() {
     this.users$ = this.api.getUsers();
@@ -21,6 +23,7 @@ export class AppComponent implements OnInit {
     // for each user we can add a property of show and use this as
     // a boolean flag to turn each one on/off for a list of any size
     user.show = !user.show;
+    
   }
   /////////////////////////////////////////////////////////////////////////////
   addUsers() {
@@ -34,10 +37,12 @@ export class AppComponent implements OnInit {
   deleteUsers() {
     // for each user we can add a property of show and use this as
     // a boolean flag to turn each one on/off for a list of any size
+    
   }
   ////////////////////////////////////////////////////////////////////////////
   search(value: string) {
     if (value) {
+      
       this.filteredUsers$ = this.users$.pipe(
         // the stream is of a single item that is of type array
         // map(user => user.name) would not work because it is not // a stream of items inside the array
@@ -53,16 +58,22 @@ export class AppComponent implements OnInit {
       // reload the full data set
       this.filteredUsers$ = this.users$;
     }
+    ;
     this.globalinput = value;
   }
 
   search2() {
+    console.clear();
+    this.iterniumber += 1;
+    console.log('search' + this.iterniumber);
     var value = this.globalinput;
 
+    this.api.logUsers();
     if (value) {
-      this.users$ = this.api.addUsers(value);
-
-      this.filteredUsers$ = this.users$.pipe(
+      let userlocal = this.api.addUsers(value);
+      this.filteredUsers$ = this.users$;
+      ///////////
+      this.filteredUsers$ = userlocal.pipe(
         map((users: IUser[]) => {
           return users.filter(
             (user: IUser) =>
@@ -70,10 +81,11 @@ export class AppComponent implements OnInit {
           );
         })
       );
-      this.api.logUsers();
+      ///////////////
     } else {
       this.filteredUsers$ = this.users$;
     }
+
     this.globalinput = value;
   }
 }
