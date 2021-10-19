@@ -29,7 +29,10 @@ export class ApiService {
       stringify = stringify.slice(0, stringify.length - 1);
       stringify += ']';
       localStorage.setItem('testJSON', stringify);
+
+      this.storageObservable(stringify);
     });
+
     let text = localStorage.getItem('testJSON');
     let obj = JSON.parse(text);
     const myObservable = new Observable((observer) => {
@@ -38,7 +41,28 @@ export class ApiService {
     myObservable.subscribe({
       next: (value) => console.log(value),
     });
-
+    return myObservable;
+  }
+  //////////////////
+  logUsers(): Observable<any> {
+    let text = localStorage.getItem('testJSON');
+    let obj = JSON.parse(text);
+    const myObservable = new Observable((observer) => {
+      observer.next(obj);
+    });
+    myObservable.subscribe({
+      next: (value) => console.log(value),
+    });
+    return myObservable;
+  }
+  ////////////////
+  storageObservable(name: string): Observable<any> {
+    const myObservable = new Observable((observer) => {
+      observer.next(name);
+    });
+    myObservable.subscribe({
+      next: (value) => value,
+    });
     return myObservable;
   }
 
@@ -50,9 +74,9 @@ export class ApiService {
       p.name = name;
       console.log(p);
       var o = JSON.stringify(p);
-      text = text+","+ o;
+      text = text + ',' + o;
       text += ']';
-      console.log(text);
+      //console.log(text);
       localStorage.setItem('testJSON', text);
     });
     let text = localStorage.getItem('testJSON');
@@ -61,7 +85,7 @@ export class ApiService {
       observer.next(obj);
     });
     myObservable.subscribe({
-      next: (value) => console.log(value),
+      next: (value) => value,
     });
     return myObservable;
   }

@@ -25,11 +25,10 @@ export class AppComponent implements OnInit {
   /////////////////////////////////////////////////////////////////////////////
   addUsers() {
     var value = this.globalinput;
-    console.log(this.globalinput);
     if (value) {
       this.users$ = this.api.addUsers(value);
-      this.filteredUsers$ = this.users$;
     }
+    this.filteredUsers$ = this.users$;
   }
   ////////////////////////////////////////////////////////////////////////////
   deleteUsers() {
@@ -52,6 +51,27 @@ export class AppComponent implements OnInit {
       );
     } else {
       // reload the full data set
+      this.filteredUsers$ = this.users$;
+    }
+    this.globalinput = value;
+  }
+
+  search2() {
+    var value = this.globalinput;
+
+    if (value) {
+      this.users$ = this.api.addUsers(value);
+      this.api.logUsers();
+
+      this.filteredUsers$ = this.users$.pipe(
+        map((users: IUser[]) => {
+          return users.filter(
+            (user: IUser) =>
+              user.name.toLowerCase().indexOf(value.toLowerCase()) > -1
+          );
+        })
+      );
+    } else {
       this.filteredUsers$ = this.users$;
     }
     this.globalinput = value;
