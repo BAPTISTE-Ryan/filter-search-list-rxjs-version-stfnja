@@ -74,13 +74,16 @@ export class ApiService {
   }
   //////////////////
   logUsers(): Observable<any> {
+    // old way using localstorage
     let text = localStorage.getItem('testJSON');
     let obj = JSON.parse(text);
+    //saving the array into an observable
     const myObservable = new Observable((observer) => {
       observer.next(obj);
     });
+    //retrieving the data 
     myObservable.subscribe({
-      next: (value) => value,
+      next: (value) => value
     });
 
     return myObservable;
@@ -94,7 +97,7 @@ export class ApiService {
       text = text.slice(0, text.length - 1);
       var p = r[0];
       p.name = name;
-      //console.log(p);
+      console.log(p);
       var o = JSON.stringify(p);
       text = text + ',' + o;
       text += ']';
@@ -109,7 +112,7 @@ export class ApiService {
     });
 
     this.myObservable1.subscribe({
-      next: (value) => console.log(value),
+      next: (value) => console.log(value[0]),
     });
 
     return this.myObservable1;
@@ -142,7 +145,7 @@ export class ApiService {
       observer.next(obj);
     });
     this.myObservable1.subscribe({
-      next: (value) => value,
+      next: (value) => console.log(value[0])
     });
     console.log('===================');
     //this.globallistvalue.subscribe();
@@ -174,7 +177,7 @@ export class ApiService {
       observer.next(obj);
     });
     this.myObservable1.subscribe({
-      next: (value) => value,
+      next: (value) => console.log(value)
     });
     console.log('===================');
     //this.globallistvalue.subscribe();

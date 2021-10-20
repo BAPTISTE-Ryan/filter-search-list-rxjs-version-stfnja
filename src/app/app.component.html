@@ -1,24 +1,25 @@
 <div class="container">
   <header>
     <h1>Angular Filter Search Demo 23</h1>
-    <button (click)="dataarr=search2()">Add USER</button>
+    <button (click)="[search2()]">Add USER</button>
     <button (click)="deleteUsers()">Delete USER</button>
+    <!--
     <button (click)="debug(iterniumber)">Debug {{iterniumber}}</button>
-  </header>
- 
+  --></header>
+
   <input
-  [(ngModel)]="name"
-  (ngModelChange)="this.api.logUsers()"
+    [(ngModel)]="name"
+    (ngModelChange)="this.api.logUsers()"
     class="search-box"
     placeholder="start typing to narrow search"
     (keyup)="[search($event.target.value)]"
     type="text"
   />
 
- 
+  <!--
 <input type="text" [(ngModel)]="name">
 <hello [name]="name"></hello>
-
+ -->
   <ul>
     <li *ngFor="let user of filteredUsers$ | async">
       <h2 class="user" (click)="showHide(user)">{{ user.name }}</h2>
