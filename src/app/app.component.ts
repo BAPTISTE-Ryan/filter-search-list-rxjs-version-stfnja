@@ -1,4 +1,11 @@
-import { Component, OnChanges,Input, OnInit, SimpleChange,DoCheck, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  OnChanges,
+  Input,
+  OnInit,
+  SimpleChanges,
+  ChangeDetectorRef,
+} from '@angular/core';
 import { ApiService } from './api.service';
 import { IUser } from './user';
 import { Observable } from 'rxjs';
@@ -8,25 +15,26 @@ import { map, filter } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit,OnChanges {
+export class AppComponent implements OnInit, OnChanges {
   users$: Observable<IUser[]>;
   filteredUsers$: Observable<IUser[]>;
   globalinput = null;
-  @Input() iterniumber :number;
+  iterniumber: number;
+  stringValue: string;
+  dataarr: any;
+  @Input() nameo: string;
 
-  constructor(private api: ApiService) {}
-  
+  constructor(private api: ApiService, private cd: ChangeDetectorRef) {}
+
   ngOnChanges(changes: SimpleChanges) {
-
-    console.log(changes.user$.currentValue);
-    console.log(changes.filteredUsers$.currentValue);
     console.log('onChanges');
-    console.log(changes);
+    console.log(changes['nameo']);
   }
   ngOnInit() {
-   this.iterniumber=1;
+    this.iterniumber = 0;
     this.users$ = this.api.getUsers();
     this.filteredUsers$ = this.users$;
+    this.iterniumber = 1;
   }
   showHide(user: IUser) {
     // for each user we can add a property of show and use this as
@@ -36,15 +44,23 @@ export class AppComponent implements OnInit,OnChanges {
   /////////////////////////////////////////////////////////////////////////////
   addUsers() {
     var value = this.globalinput;
-    if (value) {
-      this.users$ = this.api.addUsers(value);
-    }
+    if (value) {this.users$ = this.api.addUsers(value);}
     this.filteredUsers$ = this.users$;
+    this.cd.detectChanges();
   }
   ////////////////////////////////////////////////////////////////////////////
+
+  debug() {
+    console.log(this.dataarr);
+    console.log(this.filteredUsers$.subscribe);
+  }
   deleteUsers() {
+    this.api.logUsers();
     var value = this.globalinput;
     this.users$ = this.api.deleteUsers(value);
+    this.users$ = null;
+    console.log('this.users$');
+    console.log(this.users$);
   }
   ////////////////////////////////////////////////////////////////////////////
   search(value: string) {
@@ -68,7 +84,7 @@ export class AppComponent implements OnInit,OnChanges {
   }
 
   search2() {
-   // console.clear();
+    // console.clear();
     this.iterniumber += 1;
     console.log('search' + this.iterniumber);
     var value = this.globalinput;

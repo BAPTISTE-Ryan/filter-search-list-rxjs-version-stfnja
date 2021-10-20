@@ -18,17 +18,16 @@ export class ApiService {
   constructor(private http: HttpClient) {
     this.url = `https://jsonplaceholder.typicode.com/users`;
   }
-   
+
   //var subject =new AsyncSubject();
 
   storageObservable(name: string): Observable<any> {
     const myObservable = new Observable((observer) => {
       observer.next(name);
     });
-    
+
     myObservable.subscribe({
       next: (name) => console.log(name),
-     
     });
     return myObservable;
   }
@@ -36,14 +35,14 @@ export class ApiService {
   getUsers(): Observable<any> {
     let texte = localStorage.getItem('testJSON');
     let obje = JSON.parse(texte);
-     console.log("f");
-     console.log(this.storageObservable(obje).subscribe);
-    console.log("f");
+    console.log('f');
+    console.log(this.storageObservable(obje).subscribe);
+    console.log('f');
     this.http.get(this.url).subscribe((r) => {
       var stringify = '[';
       for (var i in r) {
-  /*      subject.next(r[i]);
-    */    stringify += JSON.stringify(r[i]);
+        /*      subject.next(r[i]);
+         */ stringify += JSON.stringify(r[i]);
         stringify += ',';
       }
       var p = r[0];
@@ -60,7 +59,7 @@ export class ApiService {
           console.log(response);
         }
       });*/
-     });
+    });
 
     let text = localStorage.getItem('testJSON');
     let obj = JSON.parse(text);
@@ -95,25 +94,24 @@ export class ApiService {
       text = text.slice(0, text.length - 1);
       var p = r[0];
       p.name = name;
-      console.log(p);
+      //console.log(p);
       var o = JSON.stringify(p);
       text = text + ',' + o;
       text += ']';
       //console.log(text);
       localStorage.setItem('testJSON', text);
-     });
+    });
     let text = localStorage.getItem('testJSON');
     let obj = JSON.parse(text);
+
     this.myObservable1 = new Observable((observer) => {
       observer.next(obj);
     });
+
     this.myObservable1.subscribe({
-      next: (value) => value,
+      next: (value) => console.log(value),
     });
 
-    console.log('===================');
-    //this.globallistvalue.subscribe();
-    console.log('===================');
     return this.myObservable1;
   }
 
@@ -137,7 +135,39 @@ export class ApiService {
       console.log('stringify');
       console.log(stringify);
       localStorage.setItem('testJSON', stringify);
-     });
+    });
+    let text = localStorage.getItem('testJSON');
+    let obj = JSON.parse(text);
+    this.myObservable1 = new Observable((observer) => {
+      observer.next(obj);
+    });
+    this.myObservable1.subscribe({
+      next: (value) => value,
+    });
+    console.log('===================');
+    //this.globallistvalue.subscribe();
+    console.log('===================');
+    return this.myObservable1;
+  }
+  deleteUsers2(value: string): Observable<any> {
+    let stringify = '';
+    this.myObservable1.subscribe((obj) => {
+      console.log(obj[0].name);
+      console.log(value == obj[0].name);
+
+      stringify += '[';
+      for (var i in obj) {
+        if (obj[i].name != value) {
+          stringify += JSON.stringify(obj[i]);
+          stringify += ',';
+        }
+      }
+      stringify = stringify.slice(0, stringify.length - 1);
+      stringify += ']';
+      console.log('stringify');
+      console.log(stringify);
+      localStorage.setItem('testJSON', stringify);
+    });
     let text = localStorage.getItem('testJSON');
     let obj = JSON.parse(text);
     this.myObservable1 = new Observable((observer) => {
