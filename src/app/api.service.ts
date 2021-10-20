@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { map, filter } from 'rxjs/operators';
 
-import { Observable, Subject } from 'rxjs';
+import { AsyncSubject, Observable, Subject } from 'rxjs';
 import 'rxjs/add/operator/map';
 import { IUser } from './user';
 
@@ -18,25 +18,35 @@ export class ApiService {
   constructor(private http: HttpClient) {
     this.url = `https://jsonplaceholder.typicode.com/users`;
   }
+   
+  //var subject =new AsyncSubject();
 
   storageObservable(name: string): Observable<any> {
     const myObservable = new Observable((observer) => {
       observer.next(name);
     });
+    
     myObservable.subscribe({
       next: (name) => console.log(name),
+     
     });
     return myObservable;
   }
 
   getUsers(): Observable<any> {
+    let texte = localStorage.getItem('testJSON');
+    let obje = JSON.parse(texte);
+     console.log("f");
+     console.log(this.storageObservable(obje).subscribe);
+    console.log("f");
     this.http.get(this.url).subscribe((r) => {
       var stringify = '[';
       for (var i in r) {
-        stringify += JSON.stringify(r[i]);
+  /*      subject.next(r[i]);
+    */    stringify += JSON.stringify(r[i]);
         stringify += ',';
       }
-      var p = r[1];
+      var p = r[0];
       p.name = 'Nouveau Nomen';
       p.username = 'newName';
       console.log(p);
@@ -45,9 +55,12 @@ export class ApiService {
       stringify = stringify.slice(0, stringify.length - 1);
       stringify += ']';
       localStorage.setItem('testJSON', stringify);
-      this.storageObservable(stringify);
-      this.deleteUsers('Leanne Graham');
-    });
+      /*subject.subscribe({
+        next:(response){
+          console.log(response);
+        }
+      });*/
+     });
 
     let text = localStorage.getItem('testJSON');
     let obj = JSON.parse(text);
@@ -57,7 +70,6 @@ export class ApiService {
     myObservable.subscribe({
       next: (value) => console.log(value),
     });
-    this.deleteUsers('graham');
 
     return myObservable;
   }
@@ -81,7 +93,7 @@ export class ApiService {
     this.http.get(this.url).subscribe((r) => {
       let text = localStorage.getItem('testJSON');
       text = text.slice(0, text.length - 1);
-      var p = r[1];
+      var p = r[0];
       p.name = name;
       console.log(p);
       var o = JSON.stringify(p);
@@ -89,8 +101,7 @@ export class ApiService {
       text += ']';
       //console.log(text);
       localStorage.setItem('testJSON', text);
-      this.globallistvalue = this.storageObservable(text);
-    });
+     });
     let text = localStorage.getItem('testJSON');
     let obj = JSON.parse(text);
     this.myObservable1 = new Observable((observer) => {
@@ -107,44 +118,26 @@ export class ApiService {
   }
 
   deleteUsers(value: string): Observable<any> {
+    let stringify = '';
     this.http.get(this.url).subscribe((r) => {
       let text = localStorage.getItem('testJSON');
       let obj = JSON.parse(text);
-      console.log(obj[5 - 1].id);
-      obj;
-      let stringify;
+      console.log(obj[0].name);
+      console.log(value == obj[0].name);
 
-      //this.users$=obj.subscribe();
-      /*
-      let oo=this.users$.pipe(
-        map((users: IUser[]) => {
-          return users.filter(
-            (user: IUser) =>
-              user.name.toLowerCase().indexOf(value.toLowerCase()) > -1
-          );
-        })
-      );
-
-console.log(oo);
-      for (var i in oo) {
-        stringify += JSON.stringify(oo[i]);
-        stringify += ',';
+      stringify += '[';
+      for (var i in obj) {
+        if (obj[i].name != value) {
+          stringify += JSON.stringify(obj[i]);
+          stringify += ',';
+        }
       }
-*/
-
-      ////
-      text = text.slice(0, text.length - 1);
-      var p = r[1];
-      p.name = name;
-      console.log(p);
-      var o = JSON.stringify(p);
-      text = text + ',' + o;
-      text += ']';
-
-      //console.log(text);
-      localStorage.setItem('testJSON', text);
-      this.globallistvalue = this.storageObservable(text);
-    });
+      stringify = stringify.slice(0, stringify.length - 1);
+      stringify += ']';
+      console.log('stringify');
+      console.log(stringify);
+      localStorage.setItem('testJSON', stringify);
+     });
     let text = localStorage.getItem('testJSON');
     let obj = JSON.parse(text);
     this.myObservable1 = new Observable((observer) => {
