@@ -7,7 +7,7 @@ import { IUser } from './user';
 import { Observable } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 @Component({
-  selector: 'my-app',
+  selector: 'my-app', 
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
