@@ -1,0 +1,649 @@
+    1  sudo apt update
+    2  curl -s “https://get.sdkman.io" | bash
+    3  ;
+    4  ls
+    5  rm -rf SpringBootHelloWorld
+    6  rm -rf bookstore/
+    7  rm -rf demo
+    8  ls
+    9  clear
+   10  unzip demo\ 7.zip 
+   11  clea
+   12  cd demo/
+   13  clear
+   14  ls
+   15  ./gradlew bootRun
+   16  cd demo/
+   17  ng new employee-management
+   18  cd employee-management/
+   19  ng generate component employee
+   20  clear
+   21  ls
+   22  cd node_modules/
+   23  ls
+   24  cd ..
+   25  ls
+   26  ng serve
+   27  ng serve --host 0.0.0.0 --disableHostCheck true
+   28  clear
+   29  ls
+   30  cd demo
+   31  ls
+   32  ./gradlew bootRun
+   33  clear
+   34  cd demo
+   35  cd employee-management/
+   36  ng serve --host 0.0.0.0 --disableHostCheck true
+   37  clear
+   38  ./gradlew bootRun
+   39  ng serve --host 0.0.0.0 --disableHostCheck true
+   40  clear
+   41  netstat -tulpn
+   42  kill 43911
+   43  cd demo
+   44  ls
+   45  gradle build
+   46  gradle bootRun
+   47  clear
+   48  ./gradlew bootRun
+   49  cd demo/
+   50  ./gradlew bootRun
+   51  cd demo/
+   52  cd employee-management/
+   53  ng serve --host 0.0.0.0 --disableHostCheck true
+   54  ls
+   55  cd demo
+   56  ls
+   57  cd employee-management
+   58  ng serve --host 0.0.0.0 --disable-host-check
+   59  ls
+   60  rm -rf gif.gif
+   61  ls
+   62  mkdir bin
+   63  cd bin
+   64  clear
+   65  ls
+   66  clear
+   67  ng new dd
+   68  npm i bootstrap
+   69  cd bin
+   70  ls
+   71  cd dd
+   72  clear
+   73  ls
+   74  ng generate service crud 
+   75  curl  https://64.media.tumblr.com/23b3755895f79a4c70d0f29fe207b4cd/tumblr_om4ctkhjO11qhwzkvo1_1280.
+   76  clear
+   77  ls
+   78  cd demo
+   79  ls
+   80  cd employee-management
+   81  ls
+   82  cd src
+   83  ls
+   84  ce assets
+   85  curl https://64.media.tumblr.com/23b3755895f79a4c70d0f29fe207b4cd/tumblr_om4ctkhjO11qhwzkvo1_1280.jpg --output toon.jpg 
+   86  netstat -tulpn
+   87  cd ..
+   88  ng serve --host 0.0.0.0 --disable-host-check
+   89  lear
+   90  clear
+   91  ls
+   92  cd demo
+   93  ls
+   94  ./gradlew bootRun
+   95  ls
+   96  rm -rf bin
+   97  rm -rf angular-httpclient-example/
+   98  cd demo
+   99  ls
+  100  rm -rf employee-management/
+  101  cd ..
+  102  ls
+  103  cd demo/
+  104  ls
+  105  cd src
+  106  ls
+  107  clezr
+  108  clear
+  109  cd demo
+  110  ./gradlew bootRun
+  111  clear
+  112  ./gradlew bootRun
+  113  clear
+  114  ./gradlew bootRun
+  115  clear
+  116  ./gradlew bootRun
+  117  clear
+  118  ./gradlew bootRun
+  119  clear
+  120  ./gradlew bootRun
+  121  clear
+  122  ./gradlew bootRun
+  123  clear
+  124  ./gradlew bootRun
+  125  clear
+  126  ./gradlew bootRun
+  127  clear
+  128  ./gradlew bootRun
+  129  clear
+  130  ./gradlew bootRun
+  131  clear
+  132  ./gradlew bootRun
+  133  clear
+  134  ./gradlew bootRun 
+  135  clear
+  136  ./gradlew bootRun
+  137  clear
+  138  ./gradlew bootRun 
+  139  cle&r
+  140  cle&a
+  141  clear
+  142  ls
+  143  cd demo
+  144  ls
+  145  ./gradlew bootRun
+  146  clear
+  147  export PS1="ש"
+  148  export PS1="ז"
+  149  בךק/ר
+  150  clear
+  151  be
+  152  echo "bereshit"
+  153  clear
+  154  ls
+  155  cd full
+  156  ls
+  157  cd spring-boot-angular-fullstack-examples/
+  158  ls
+  159  cd spring-boot-hello-world-with-routing/
+  160  clear
+  161  ls
+  162  clear
+  163  ls
+  164  clear
+  165  ls
+  166  cd backend-spring-boot-hello-world-with-routing/
+  167  ls
+  168  ng serve
+  169  mvn spring-boot:run
+  170  clear
+  171  eport PS1="א"
+  172  eסport PS1="א"
+  173  export PS1="א"
+  174  clear
+  175  ls
+  176  cd full
+  177  cd spring-boot-angular-fullstack-examples/
+  178  cd spring-boot-hello-world-with-routing/
+  179  clear
+  180  ls
+  181  cd frontend-spring-boot-angular-hello-world-with-routing/
+  182  ls
+  183  clear
+  184  ng serve
+  185  ls
+  186  ng install
+  187  ng update
+  188  ng serve
+  189  npm update
+  190  ng serve
+  191  ng serve --host 0.0.0.0 --disableHostCheck true
+  192  cd full
+  193  ls
+  194  cd spring-boot-angular-fullstack-examples/
+  195  clear
+  196  ls
+  197  cd spring-boot-crud-full-stack/
+  198  clear
+  199  ls
+  200  cd backend-spring-boot-crud-full-stack/
+  201  mvn spring-boot:run
+  202  CLEAR
+  203  clear
+  204  ls
+  205  cd full
+  206  cd spring-boot-angular-fullstack-examples/
+  207  cd spring-boot-crud-full-stack/
+  208  cd frontend-spring-boot-angular-crud-full-stack/
+  209  clear
+  210  ls
+  211  export PS1="*"
+  212  clear
+  213  ng serve --host 0.0.0.0 --disable-host-check
+  214  ng update
+  215  npm update
+  216  clear
+  217  ng serve --host 0.0.0.0 --disable-host-check
+  218  ls
+  219  cd full
+  220  cd spring-boot-angular-fullstack-examples/
+  221  cd spring-boot-crud-full-stack/
+  222  cd frontend-spring-boot-angular-crud-full-stack/
+  223  ng serve --host 0.0.0.0 --disable-host-check
+  224  ng serve
+  225  ls
+  226  ng serve  --disable-host-check
+  227  ls
+  228  ng serve --host 0.0.0.0 
+  229  ls
+  230  ng serve --host 0.0.0.0  ~~public ipAdress
+  231  ng serve --host 0.0.0.0  --public ipAdress
+  232  ng serve --host 0.0.0.0  --public 0.0.0.0
+  233  ng serve --host 0.0.0.0 --port 4200  --public 0.0.0.0
+  234  ng serve --public --host 0.0.0.0 --port 4200  
+  235  npm update
+  236  npm install --save -dev @angular/cli@latest
+  237  ng serve --public --host 0.0.0.0 --port 4200  
+  238  ng version
+  239  ng serve --host 0.0.0.0 --port 4200  
+  240  ng serve --host 0.0.0.0 
+  241  npm install
+  242  ng serve --host 0.0.0.0 
+  243  npm uninstall @angular-devkit/build-angular
+  244  npm install --save-dev @angular-devkit/build-angular
+  245  ng serve --host 0.0.0.0 
+  246  ng update @angular/cli @angular/core --allow-dirty --force
+  247  ng serve --host 0.0.0.0 
+  248  npm update
+  249  npm uninstall -g @angular/cli
+  250  cd ..
+  251  npm uninstall -g @angular/cli
+  252  sudo -i
+  253  ls
+  254  cd frontend-spring-boot-angular-crud-full-stack/
+  255  clear
+  256  ng --v
+  257  ng --version
+  258  ng serve --host 0.0.0.0 
+  259  npm update
+  260  ng update
+  261  npm install
+  262  npm i --only=dev
+  263  npm uninstall -g @angular/cli
+  264  sudo -i
+  265  ng serve --host 0.0.0.0 
+  266  npm uninstall -g @angular/cli
+  267  sudo -i
+  268  clear
+  269  sudo npm install -g @angular/cli
+  270  ng serve --host 0.0.0.0
+  271  npm install --save-dev @angular-devkit/build-angular
+  272  sudo -i
+  273  clear
+  274  ng serve --host 0.0.0.0
+  275  npm rm -rf node_modules
+  276  sudo -i
+  277  clear
+  278  cd ../../..
+  279  ls
+  280  ng new dou
+  281  cd dou
+  282  ng serve --host 0.0.0.0
+  283  ls
+  284  ng serve --host 0.0.0.0 --public
+  285  clear
+  286  npm install ember-cli-cors -D
+  287  ng serve --host 0.0.0.0 --public
+  288  ng serve --host 0.0.0.0 
+  289  ng serve --host 0.0.0.0 —-proxy-config proxy.conf.json
+  290  ng serve --host 0.0.0.0 --proxy-config proxy.conf.json
+  291  netstat -tulpn
+  292  npm install ember-cli-cors
+  293  ng serve --host 0.0.0.0 --proxy-config proxy.conf.json
+  294  ng serve --host 0.0.0.0 --proxy-config --open
+  295  netstat -tulpn
+  296  ng serve --host 0.0.0.0 
+  297  cd full
+  298  cd spring-boot-angular-fullstack-examples/
+  299  cd spring-boot-crud-full-stack/
+  300  cd backend-spring-boot-crud-full-stack/
+  301  mvn spring-boot:run
+  302  ng serve
+  303  mvn spring-boot:run
+  304  netstat -tulpn
+  305  kill 230185
+  306  netstat -tulpn
+  307  KILL 230554
+  308  kill  230554
+  309  netstat -tulpn
+  310  kill 230837
+  311  clear
+  312  ls
+  313  clear
+  314  netstat -tulpn
+  315  kill 230983
+  316  netstat -tulpn
+  317  kill 231262
+  318  kill 230331
+  319  cd ../../..
+  320  ls
+  321  cd ..
+  322  ls
+  323  cd femo
+  324  ls
+  325  cd demo
+  326  ls
+  327  ng new piou
+  328  ng serve --host 0.0.0.0 --port 4500
+  329  cd piou/
+  330  ng serve --host 0.0.0.0 --port 4500
+  331  ls
+  332  netstat -tulpn
+  333  kill 227902
+  334  kill 228095
+  335  netstat -tulpn
+  336  kill 228358
+  337  netstat -tulpn
+  338  kill 228412
+  339  netstat -tulpn
+  340  kill 228321
+  341  clear
+  342  netstat -tulpn
+  343  kill 228464
+  344  ls
+  345  clear
+  346  cd full
+  347  ls
+  348  cd spring-boot-angular-fullstack-examples/
+  349  cd spring-boot-crud-full-stack/
+  350  clear
+  351  ls
+  352  cd backend-spring-boot-crud-full-stack/
+  353  netstat -tulpn
+  354  export PS="<>"
+  355  export PS1="<>"
+  356  clear
+  357  mvn spring-boot:run
+  358  clear
+  359  mvn spring-boot:run
+  360  cd full/
+  361  cd spring-boot-angular-fullstack-examples/
+  362  cd spring-boot-crud-full-stack/
+  363  cd backend-spring-boot-crud-full-stack/
+  364  clear
+  365  mvn spring-boot:run
+  366  cd full/spring-boot-angular-fullstack-examples/spring-boot-crud-full-stack/frontend-spring-boot-angular-crud-full-stack/
+  367  clear
+  368  ls
+  369  ng serve -host 0.0.0.0 -post 4500
+  370  ls
+  371  ng serve --host 0.0.0.0 --post 4500
+  372  cd ../../../
+  373  ls
+  374  cd dou
+  375  ng serve --host 0.0.0.0 --post 4500
+  376  ng serve --host 0.0.0.0 --port 4500
+  377  netstat -tulpn
+  378  kill 257740
+  379  cd full/spring-boot-angular-fullstack-examples/spring-boot-crud-full-stack/backend-spring-boot-crud-full-stack/
+  380  mvn spring-boot:run
+  381  ls
+  382  cd dwd
+  383  ls
+  384  ng new deoit
+  385  cd ..
+  386  ng new deoit
+  387  clear
+  388  netstat -tulpn
+  389  kill 258331
+  390  ng serve --host 0.0
+  391  cd deoit
+  392  ng serve --host 0.0.0.0
+  393  cd ..
+  394  cd dwd/gou/startbootstrap-business-casual-gh-pages/f/angular-bootstrap
+  395  clear
+  396  npm i jquery
+  397  npm install jquery
+  398  clear
+  399  netstat -tulpn
+  400  kill 259198
+  401  cd ../../../..
+  402  mkdir dd
+  403  cd dd
+  404  git clone https://github.com/AndrewJBateman/angular-website-example.git
+  405  cd angular-website-example/
+  406  npm i 
+  407  ls
+  408  clear
+  409  ng serve 0.0.0.0
+  410  ng serve --host 0.0.0.0
+  411  df
+  412  ng serve --host 0.0.0.0
+  413  netstat -tulpn
+  414  cd full/spring-boot-angular-fullstack-examples/spring-boot-crud-full-stack/backend-spring-boot-crud-full-stack/
+  415  clear
+  416  mvn spring-boot:run
+  417  ls
+  418  rm -rf package.json 
+  419  rm -rf package-lock.json 
+  420  rm -rf project/
+  421  rm -rf f
+  422  ng -version
+  423  ng --version
+  424  ng --update
+  425  ng -update
+  426  clear
+  427  ng -update
+  428  ng update 
+  429  ng install
+  430  ng new s
+  431  npm unistall ng 
+  432  ng
+  433  npm uninstall -g @angular/cli
+  434  sudoˆ-i
+  435  sudo -i
+  436  clear
+  437  ls
+  438  ng new project
+  439  npm update
+  440  clear
+  441  ng new project
+  442  ng new project --force
+  443  ng new project --legacy-peer-deps
+  444  clear
+  445  nvm
+  446  sudo apt get install nvm
+  447  clear
+  448  ng -version
+  449  ng -v
+  450  ng -version
+  451  ng --version
+  452  clear
+  453  ngnew d
+  454  ng new d
+  455  npm -uninstall
+  456  npm uninstall -g @angular/cli
+  457  npm cache clean --force
+  458  npm install -g @angular/cli@7.2
+  459  ng --version
+  460  ng new f
+  461  clear
+  462  ls
+  463  sudo -i
+  464  $
+  465  clear
+  466  ng new testProject
+  467  cd routing
+  468  mkdir routing
+  469  cd routing
+  470  clear
+  471  ng new container
+  472  ls
+  473  cd container
+  474  ls
+  475  mkdir components
+  476  cd components
+  477  ng new formspage
+  478  ng generate formspage
+  479  ng module formspage
+  480  ng g module formspage
+  481  clear
+  482  ls
+  483  cd formspage/
+  484  ls
+  485  nano formspage.module.ts 
+  486  cd ../../..
+  487  rm -rf 
+  488  l
+  489  ls
+  490  rm -rf *
+  491  ls
+  492  ng new mainpage
+  493  ipconfig
+  494  ip
+  495  myip
+  496  ifgconfig -a
+  497  hostname -I
+  498  ng start
+  499  ng serve
+  500  ls
+  501  cd mainpage/
+  502  ng start
+  503  ng serve
+  504  ng serve --host 0.0.0.0
+  505  ng serve --host 127.0.0.1  --port 7880
+  506  clear
+  507  ng serve --host 0.0.0.0  --port 7880
+  508  cd ../..
+  509  ls
+  510  cd h
+  511  unzip angular-8-reactive-form-validation.zip 
+  512  ls
+  513  ng serve -host 0.0.
+  514  ng serve -host 0.0.0.0 --port 7880
+  515  ls
+  516  ng serve -host 0.0.0.0 --port 7880
+  517  cd new
+  518  ls
+  519  cd banner
+  520  ng serve -host 0.0.0.0 --port 7880
+  521  ng serve --host 0.0.0.0 --port 7880
+  522  cl
+  523  ng serve --host 0.0.0.0 --port 7880
+  524  cd new
+  525  ls
+  526  cd origianl
+  527  ng serve --host 0.0.0.0 --port 7880
+  528  cd new 
+  529  ng serve --host 0.0.0.0 --port 7880
+  530  cd h
+  531  cd ..
+  532  cd h
+  533  ls
+  534  ng serve --host 0.0.0.0 --port 7880
+  535  cd src
+  536  ng serve --host 0.0.0.0 --port 7880
+  537  sudo -i
+  538  ng serve --host 0.0.0.0 --port 7880
+  539  sudo -s
+  540  ng serve --host 0.0.0.0 --port 7880
+  541  cd ../../new/origianl/
+  542  ng serve --host 0.0.0.0 --port 7880
+  543  cd ../../h/
+  544  ng serve --host 0.0.0.0 --port 7880 --disable-host-check
+  545  ng serve --port 7880 
+  546  ng serve --host 0.0.0.0 --port 7881
+  547  mkdir emptyproject
+  548  de emptyproject/
+  549  cd emptyproject/
+  550  ng new app
+  551  cd ../..
+  552  mkdir new-app
+  553  ng new app
+  554  cd app/
+  555  ls
+  556  clear
+  557  ls
+  558  ng serve --host 0.0.0.0 --port 7881
+  559  clear
+  560  ng serve --host 0.0.0.0 --port 7881
+  561  clear
+  562  ng serve --host 0.0.0.0 --port 7881
+  563  clear
+  564  ng serve --host 0.0.0.0 --port 7881
+  565  history
+  566  cd tutorialspoint/
+  567  clear
+  568  ls
+  569  cd reactive
+  570  clear
+  571  ls
+  572  ng serve --host 0.0.0.0 --port 7881
+  573  cd ..
+  574  clear
+  575  ng new allproject
+  576  ng serve --host 0.0.0.0 --port 7881
+  577  cd allproject/
+  578  ng serve --host 0.0.0.0 --port 7881
+  579  clear
+  580  ls
+  581  mkdir void
+  582  cd void
+  583  clear
+  584  git pull https://github.com/BAPTISTE-Ryan/search-list.git
+  585  git pull https://github.com/BAPTISTE-Ryan/search-list
+  586  git clone https://github.com/BAPTISTE-Ryan/search-list.git
+  587  clear
+  588  git status
+  589  ls
+  590  cd search-list/
+  591  git checkout -b dc636afcd620199c9f11f49f7942e7cd1a570597
+  592  git push 
+  593  git push --set-upstream origin dc636afcd620199c9f11f49f7942e7cd1a570597
+  594  git clone https://github.com/BAPTISTE-Ryan/search-list
+  595  cd search-list/
+  596  git status
+  597  git checkout -b dc636afcd620199c9f11f49f7942e7cd1a570597
+  598  git push
+  599  dc636afcd620199c9f11f49f7942e7cd1a570597dc636afcd620199c9f11f49f7942e7cd1a570597
+  600  git push --set-upstream origin dc636afcd620199c9f11f49f7942e7cd1a570597
+  601  git -info
+  602  git --help
+  603  cd r
+  604  git push 
+  605  git remote add r r
+  606  git push r 
+  607  git push --set-upstream r master
+  608  gh repo clone BAPTISTE-Ryan/search-list
+  609  sudo apt install gitsome
+  610  gh repo clone BAPTISTE-Ryan/search-list
+  611  gh repo clone
+  612  gh configure
+  613  clear
+  614  mkdir f
+  615  cd f
+  616  gh repo clone BAPTISTE-Ryan/search-list
+  617  gh
+  618  gh user
+  619  git user
+  620  git --help
+  621  clear
+  622  git clone https://github.com/BAPTISTE-Ryan/filter-search-list-rxjs-version-stfnja
+  623  ls
+  624  cd filter-search-list-rxjs-version-stfnja/
+  625  clear
+  626  ls
+  627  echo e.txt
+  628  clear
+  629* git staAtus
+  630  ls
+  631  echo >e.txt
+  632  ls
+  633  clear
+  634  git status
+  635  git push 7
+  636  git push
+  637  git push 
+  638  git push -u origin master
+  639  git commit 
+  640  git add *
+  641  git commit 
+  642  git commit -m ''
+  643  git commit -m ' '
+  644  git commit -m '-'
+  645  git status
+  646  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
+  647  clear
+  648  git push origin master
+  649  history >> histo.txt
